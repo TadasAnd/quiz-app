@@ -105,75 +105,75 @@
   --letter-spacing-h2-mobile: 0;
   --font-weight-h2-mobile: 600;
   /* H3 Regular */
-  --font-size-h3-regular: 16px;
-  --line-height-h3-regular: 24px;
-  --letter-spacing-h3-regular: 0;
-  --font-weight-h3-regular: 400;
+  --font-size-h3-regular-mobile: 16px;
+  --line-height-h3-regular-mobile: 24px;
+  --letter-spacing-h3-regular-mobile: 0;
+  --font-weight-h3-regular-mobile: 400;
   /* H3 Semibold */
-  --font-size-h3-semibold: 16px;
-  --line-height-h3-semibold: 24px;
-  --letter-spacing-h3-semibold: 0;
-  --font-weight-h3-semibold: 600;
+  --font-size-h3-semibold-mobile: 16px;
+  --line-height-h3-semibold-mobile: 24px;
+  --letter-spacing-h3-semibold-mobile: 0;
+  --font-weight-h3-semibold-mobile: 600;
   /* H4 Regular */
-  --font-size-h4-regular: 16px;
-  --line-height-h4-regular: 24px;
-  --letter-spacing-h4-regular: 0;
-  --font-weight-h4-regular: 400;
+  --font-size-h4-regular-mobile: 16px;
+  --line-height-h4-regular-mobile: 24px;
+  --letter-spacing-h4-regular-mobile: 0;
+  --font-weight-h4-regular-mobile: 400;
   /* H4 Semibold */
-  --font-size-h4-semibold: 16px;
-  --line-height-h4-semibold: 24px;
-  --letter-spacing-h4-semibold: 0;
-  --font-weight-h4-semibold: 600;
+  --font-size-h4-semibold-mobile: 16px;
+  --line-height-h4-semibold-mobile: 24px;
+  --letter-spacing-h4-semibold-mobile: 0;
+  --font-weight-h4-semibold-mobile: 600;
   /* Button */
-  --font-size-button-regular: 14px;
-  --line-height-button-regular: 20px;
-  --letter-spacing-button-regular: 4%;
-  --font-weight-button-regular: 600;
+  --font-size-button-regular-mobile: 14px;
+  --line-height-button-regular-mobile: 20px;
+  --letter-spacing-button-regular-mobile: 4%;
+  --font-weight-button-regular-mobile: 600;
   /* Body Semibold */
-  --font-size-body-semibold: 14px;
-  --line-height-body-semibold: 20px;
-  --letter-spacing-body-semibold: 0;
-  --font-weight-body-semibold: 600;
+  --font-size-body-semibold-mobile: 14px;
+  --line-height-body-semibold-mobile: 20px;
+  --letter-spacing-body-semibold-mobile: 0;
+  --font-weight-body-semibold-mobile: 600;
   /* Body Medium */
-  --font-size-body-medium: 14px;
-  --line-height-body-medium: 20px;
-  --letter-spacing-body-medium: 0;
-  --font-weight-body-medium: 500;
+  --font-size-body-medium-mobile: 14px;
+  --line-height-body-medium-mobile: 20px;
+  --letter-spacing-body-medium-mobile: 0;
+  --font-weight-body-medium-mobile: 500;
   /* Body Regular */
-  --font-size-body-regular: 14px;
-  --line-height-body-regular: 20px;
-  --letter-spacing-body-regular: 0;
-  --font-weight-body-regular: 400;
+  --font-size-body-regular-mobile: 14px;
+  --line-height-body-regular-mobile: 20px;
+  --letter-spacing-body-regular-mobile: 0;
+  --font-weight-body-regular-mobile: 400;
   /* Body 2 Semibold */
-  --font-size-body-2-semibold: 12px;
-  --line-height-body-2-semibold: 16px;
-  --letter-spacing-body-2-semibold: 0;
-  --font-weight-body-2-semibold: 600;
+  --font-size-body-2-semibold-mobile: 12px;
+  --line-height-body-2-semibold-mobile: 16px;
+  --letter-spacing-body-2-semibold-mobile: 0;
+  --font-weight-body-2-semibold-mobile: 600;
   /* Body 2 Medium */
-  --font-size-body-2-medium: 12px;
-  --line-height-body-2-medium: 16px;
-  --letter-spacing-body-2-medium: 0;
-  --font-weight-body-2-medium: 500;
+  --font-size-body-2-medium-mobile: 12px;
+  --line-height-body-2-medium-mobile: 16px;
+  --letter-spacing-body-2-medium-mobile: 0;
+  --font-weight-body-2-medium-mobile: 500;
   /* Body 2 Regular */
-  --font-size-body-2-regular: 12px;
-  --line-height-body-2-regular: 16px;
-  --letter-spacing-body-2-regular: 0;
-  --font-weight-body-2-regular: 400;
+  --font-size-body-2-regular-mobile: 12px;
+  --line-height-body-2-regular-mobile: 16px;
+  --letter-spacing-body-2-regular-mobile: 0;
+  --font-weight-body-2-regular-mobile: 400;
   /* Caption Semibold */
-  --font-size-caption-semibold: 12px;
-  --line-height-caption-semibold: 16px;
-  --letter-spacing-caption-semibold: 0;
-  --font-weight-caption-semibold: 600;
+  --font-size-caption-semibold-mobile: 12px;
+  --line-height-caption-semibold-mobile: 16px;
+  --letter-spacing-caption-semibold-mobile: 0;
+  --font-weight-caption-semibold-mobile: 600;
   /* Caption Medium */
-  --font-size-caption-medium: 12px;
-  --line-height-caption-medium: 16px;
-  --letter-spacing-caption-medium: 0;
-  --font-weight-caption-medium: 500;
+  --font-size-caption-medium-mobile: 12px;
+  --line-height-caption-medium-mobile: 16px;
+  --letter-spacing-caption-medium-mobile: 0;
+  --font-weight-caption-medium-mobile: 500;
   /* Caption Regular */
-  --font-size-caption-regular: 12px;
-  --line-height-caption-regular: 16px;
-  --letter-spacing-caption-regular: 0;
-  --font-weight-caption-regular: 400;
+  --font-size-caption-regular-mobile: 12px;
+  --line-height-caption-regular-mobile: 16px;
+  --letter-spacing-caption-regular-mobile: 0;
+  --font-weight-caption-regular-mobile: 400;
 
   /* Colors */
   --color-brand-yellow: #ffcf00;
@@ -417,12 +417,12 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);

@@ -1,10 +1,65 @@
+import Image from "next/image";
+import Button from "./components/Button";
+import SaleBanner from "./components/SaleBanner";
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1 className="text-button text-brand-yellow-dark">Testing</h1>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
-    </div>
+    <main className="flex flex-col lg:flex-row lg:gap-20 items-center justify-center size-full min-h-screen">
+      <section className="flex flex-col p-4 lg:p-0 size-full items-center z-10 lg:max-w-[500px] lg:items-start">
+        <Image
+          src="/images/logo.png"
+          alt="Logo"
+          width={126}
+          height={40}
+          className="pb-4"
+        />
+        <Image
+          src="/images/brain_group.webp"
+          alt="Brain Group"
+          width={270}
+          height={220}
+          role="presentation"
+          className="pb-4 lg:hidden"
+        />
+        <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4">
+            <h1 className="text-h1 text-brand-indigo-dark">
+              Emotional cravings or mood swings?
+            </h1>
+            <h4 className="text-h4-regular text-brand-indigo">
+              Curb your emotional cravings, reduce mood swings, and promote
+              serotonin balance. Take a quiz to see how Suniflow can help you.
+            </h4>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h4 className="text-h4-semibold text-brand-indigo-dark">
+              Start by selecting your gender:
+            </h4>
+            <div className="flex gap-4 justify-center pb-3">
+              <Link href="/quiz" className="flex-1">
+                <Button variant="primary" iconPath="/images/icons/female.svg">
+                  Female
+                </Button>
+              </Link>
+              <Link href="/quiz" className="flex-1">
+                <Button variant="secondary" iconPath="/images/icons/male.svg">
+                  Male
+                </Button>
+              </Link>
+            </div>
+            <SaleBanner title="Summer sale" discount="60%" />
+          </div>
+        </div>
+      </section>
+      <Image
+        src="/images/brain_group_desktop.webp"
+        alt="Brain Group"
+        width={450}
+        height={440}
+        role="presentation"
+        className="lg:block hidden max-w-[553px]"
+      />
+    </main>
   );
 }

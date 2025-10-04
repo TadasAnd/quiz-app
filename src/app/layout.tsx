@@ -19,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${soraSans.variable} antialiased`}>{children}</body>
+      <body className={`${soraSans.variable} antialiased relative`}>
+        <div className="absolute inset-0 bg-[url('/images/backgrounds/bg_yellow.webp')] bg-cover blur-md opacity-16" />
+        {children}
+      </body>
     </html>
   );
 }
