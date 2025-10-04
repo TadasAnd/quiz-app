@@ -8,8 +8,413 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sora-sans);
+  /* Typography */
+
+  /* Desktop */
+  /* H1 */
+  --font-size-h1: 48px;
+  --line-height-h1: 64px;
+  --letter-spacing-h1: 0;
+  --font-weight-h1: 600;
+  /* H2 */
+  --font-size-h2: 32px;
+  --line-height-h2: 48px;
+  --letter-spacing-h2: 0;
+  --font-weight-h2: 600;
+  /* H3 Regular */
+  --font-size-h3-regular: 24px;
+  --line-height-h3-regular: 40px;
+  --letter-spacing-h3-regular: 0;
+  --font-weight-h3-regular: 400;
+  /* H3 Semibold */
+  --font-size-h3-semibold: 24px;
+  --line-height-h3-semibold: 40px;
+  --letter-spacing-h3-semibold: 0;
+  --font-weight-h3-semibold: 600;
+  /* H4 Regular */
+  --font-size-h4-regular: 20px;
+  --line-height-h4-regular: 32px;
+  --letter-spacing-h4-regular: 0;
+  --font-weight-h4-regular: 400;
+  /* H4 Semibold */
+  --font-size-h4-semibold: 20px;
+  --line-height-h4-semibold: 32px;
+  --letter-spacing-h4-semibold: 0;
+  --font-weight-h4-semibold: 600;
+  /* Button */
+  --font-size-button-regular: 16px;
+  --line-height-button-regular: 24px;
+  --letter-spacing-button-regular: 4%;
+  --font-weight-button-regular: 600;
+  /* Body Semibold */
+  --font-size-body-semibold: 16px;
+  --line-height-body-semibold: 24px;
+  --letter-spacing-body-semibold: 0;
+  --font-weight-body-semibold: 600;
+  /* Body Medium */
+  --font-size-body-medium: 16px;
+  --line-height-body-medium: 24px;
+  --letter-spacing-body-medium: 0;
+  --font-weight-body-medium: 500;
+  /* Body Regular */
+  --font-size-body-regular: 16px;
+  --line-height-body-regular: 24px;
+  --letter-spacing-body-regular: 0;
+  --font-weight-body-regular: 400;
+  /* Body 2 Semibold */
+  --font-size-body-2-semibold: 14px;
+  --line-height-body-2-semibold: 20px;
+  --letter-spacing-body-2-semibold: 0;
+  --font-weight-body-2-semibold: 600;
+  /* Body 2 Medium */
+  --font-size-body-2-medium: 14px;
+  --line-height-body-2-medium: 20px;
+  --letter-spacing-body-2-medium: 0;
+  --font-weight-body-2-medium: 500;
+  /* Body 2 Regular */
+  --font-size-body-2-regular: 14px;
+  --line-height-body-2-regular: 20px;
+  --letter-spacing-body-2-regular: 0;
+  --font-weight-body-2-regular: 400;
+  /* Caption Semibold */
+  --font-size-caption-semibold: 12px;
+  --line-height-caption-semibold: 16px;
+  --letter-spacing-caption-semibold: 0;
+  --font-weight-caption-semibold: 600;
+  /* Caption Medium */
+  --font-size-caption-medium: 12px;
+  --line-height-caption-medium: 16px;
+  --letter-spacing-caption-medium: 0;
+  --font-weight-caption-medium: 500;
+  /* Caption Regular */
+  --font-size-caption-regular: 12px;
+  --line-height-caption-regular: 16px;
+  --letter-spacing-caption-regular: 0;
+  --font-weight-caption-regular: 400;
+
+  /* Mobile */
+  /* H1 */
+  --font-size-h1-mobile: 24px;
+  --line-height-h1-mobile: 40px;
+  --letter-spacing-h1-mobile: 0;
+  --font-weight-h1-mobile: 600;
+  /* H2 */
+  --font-size-h2-mobile: 20px;
+  --line-height-h2-mobile: 32px;
+  --letter-spacing-h2-mobile: 0;
+  --font-weight-h2-mobile: 600;
+  /* H3 Regular */
+  --font-size-h3-regular: 16px;
+  --line-height-h3-regular: 24px;
+  --letter-spacing-h3-regular: 0;
+  --font-weight-h3-regular: 400;
+  /* H3 Semibold */
+  --font-size-h3-semibold: 16px;
+  --line-height-h3-semibold: 24px;
+  --letter-spacing-h3-semibold: 0;
+  --font-weight-h3-semibold: 600;
+  /* H4 Regular */
+  --font-size-h4-regular: 16px;
+  --line-height-h4-regular: 24px;
+  --letter-spacing-h4-regular: 0;
+  --font-weight-h4-regular: 400;
+  /* H4 Semibold */
+  --font-size-h4-semibold: 16px;
+  --line-height-h4-semibold: 24px;
+  --letter-spacing-h4-semibold: 0;
+  --font-weight-h4-semibold: 600;
+  /* Button */
+  --font-size-button-regular: 14px;
+  --line-height-button-regular: 20px;
+  --letter-spacing-button-regular: 4%;
+  --font-weight-button-regular: 600;
+  /* Body Semibold */
+  --font-size-body-semibold: 14px;
+  --line-height-body-semibold: 20px;
+  --letter-spacing-body-semibold: 0;
+  --font-weight-body-semibold: 600;
+  /* Body Medium */
+  --font-size-body-medium: 14px;
+  --line-height-body-medium: 20px;
+  --letter-spacing-body-medium: 0;
+  --font-weight-body-medium: 500;
+  /* Body Regular */
+  --font-size-body-regular: 14px;
+  --line-height-body-regular: 20px;
+  --letter-spacing-body-regular: 0;
+  --font-weight-body-regular: 400;
+  /* Body 2 Semibold */
+  --font-size-body-2-semibold: 12px;
+  --line-height-body-2-semibold: 16px;
+  --letter-spacing-body-2-semibold: 0;
+  --font-weight-body-2-semibold: 600;
+  /* Body 2 Medium */
+  --font-size-body-2-medium: 12px;
+  --line-height-body-2-medium: 16px;
+  --letter-spacing-body-2-medium: 0;
+  --font-weight-body-2-medium: 500;
+  /* Body 2 Regular */
+  --font-size-body-2-regular: 12px;
+  --line-height-body-2-regular: 16px;
+  --letter-spacing-body-2-regular: 0;
+  --font-weight-body-2-regular: 400;
+  /* Caption Semibold */
+  --font-size-caption-semibold: 12px;
+  --line-height-caption-semibold: 16px;
+  --letter-spacing-caption-semibold: 0;
+  --font-weight-caption-semibold: 600;
+  /* Caption Medium */
+  --font-size-caption-medium: 12px;
+  --line-height-caption-medium: 16px;
+  --letter-spacing-caption-medium: 0;
+  --font-weight-caption-medium: 500;
+  /* Caption Regular */
+  --font-size-caption-regular: 12px;
+  --line-height-caption-regular: 16px;
+  --letter-spacing-caption-regular: 0;
+  --font-weight-caption-regular: 400;
+
+  /* Colors */
+  --color-brand-yellow: #ffcf00;
+  --color-brand-yellow-dark: #ffaa2b;
+  --color-brand-yellow-light: #fff7d6;
+  --color-brand-indigo: #333a7d;
+  --color-brand-indigo-dark: #00095c;
+  --color-brand-indigo-light: #a8b0f8;
+  --color-brand-green: #4bd4a9;
+  --color-brand-red: #e32855;
+  --color-brand-red-light: #ef809b;
+}
+
+@layer utilities {
+  /* Typography */
+  /* Desktop */
+  .text-h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+    letter-spacing: var(--letter-spacing-h1);
+    font-weight: var(--font-weight-h1);
+  }
+
+  .text-h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    letter-spacing: var(--letter-spacing-h2);
+    font-weight: var(--font-weight-h2);
+  }
+  .text-h3-regular {
+    font-size: var(--font-size-h3-regular);
+    line-height: var(--line-height-h3-regular);
+    letter-spacing: var(--letter-spacing-h3-regular);
+    font-weight: var(--font-weight-h3-regular);
+  }
+  .text-h3-semibold {
+    font-size: var(--font-size-h3-semibold);
+    line-height: var(--line-height-h3-semibold);
+    letter-spacing: var(--letter-spacing-h3-semibold);
+    font-weight: var(--font-weight-h3-semibold);
+  }
+  .text-h4-regular {
+    font-size: var(--font-size-h4-regular);
+    line-height: var(--line-height-h4-regular);
+    letter-spacing: var(--letter-spacing-h4-regular);
+    font-weight: var(--font-weight-h4-regular);
+  }
+  .text-h4-semibold {
+    font-size: var(--font-size-h4-semibold);
+    line-height: var(--line-height-h4-semibold);
+    letter-spacing: var(--letter-spacing-h4-semibold);
+    font-weight: var(--font-weight-h4-semibold);
+  }
+  .text-button {
+    font-size: var(--font-size-button-regular);
+    line-height: var(--line-height-button-regular);
+    letter-spacing: var(--letter-spacing-button-regular);
+    font-weight: var(--font-weight-button-regular);
+  }
+  .text-body-semibold {
+    font-size: var(--font-size-body-semibold);
+    line-height: var(--line-height-body-semibold);
+    letter-spacing: var(--letter-spacing-body-semibold);
+    font-weight: var(--font-weight-body-semibold);
+  }
+  .text-body-medium {
+    font-size: var(--font-size-body-medium);
+    line-height: var(--line-height-body-medium);
+    letter-spacing: var(--letter-spacing-body-medium);
+    font-weight: var(--font-weight-body-medium);
+  }
+  .text-body-regular {
+    font-size: var(--font-size-body-regular);
+    line-height: var(--line-height-body-regular);
+    letter-spacing: var(--letter-spacing-body-regular);
+    font-weight: var(--font-weight-body-regular);
+  }
+  .text-body-2-semibold {
+    font-size: var(--font-size-body-2-semibold);
+    line-height: var(--line-height-body-2-semibold);
+    letter-spacing: var(--letter-spacing-body-2-semibold);
+    font-weight: var(--font-weight-body-2-semibold);
+  }
+  .text-body-2-medium {
+    font-size: var(--font-size-body-2-medium);
+    line-height: var(--line-height-body-2-medium);
+    letter-spacing: var(--letter-spacing-body-2-medium);
+    font-weight: var(--font-weight-body-2-medium);
+  }
+  .text-body-2-regular {
+    font-size: var(--font-size-body-2-regular);
+    line-height: var(--line-height-body-2-regular);
+    letter-spacing: var(--letter-spacing-body-2-regular);
+    font-weight: var(--font-weight-body-2-regular);
+  }
+  .text-caption-semibold {
+    font-size: var(--font-size-caption-semibold);
+    line-height: var(--line-height-caption-semibold);
+    letter-spacing: var(--letter-spacing-caption-semibold);
+    font-weight: var(--font-weight-caption-semibold);
+  }
+  .text-caption-medium {
+    font-size: var(--font-size-caption-medium);
+    line-height: var(--line-height-caption-medium);
+    letter-spacing: var(--letter-spacing-caption-medium);
+    font-weight: var(--font-weight-caption-medium);
+  }
+  .text-caption-regular {
+    font-size: var(--font-size-caption-regular);
+    line-height: var(--line-height-caption-regular);
+    letter-spacing: var(--letter-spacing-caption-regular);
+    font-weight: var(--font-weight-caption-regular);
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .text-h1 {
+      font-size: var(--font-size-h1-mobile);
+      line-height: var(--line-height-h1-mobile);
+      letter-spacing: var(--letter-spacing-h1-mobile);
+      font-weight: var(--font-weight-h1-mobile);
+    }
+    .text-h2 {
+      font-size: var(--font-size-h2-mobile);
+      line-height: var(--line-height-h2-mobile);
+      letter-spacing: var(--letter-spacing-h2-mobile);
+      font-weight: var(--font-weight-h2-mobile);
+    }
+    .text-h3-regular {
+      font-size: var(--font-size-h3-regular-mobile);
+      line-height: var(--line-height-h3-regular-mobile);
+      letter-spacing: var(--letter-spacing-h3-regular-mobile);
+      font-weight: var(--font-weight-h3-regular-mobile);
+    }
+    .text-h3-semibold {
+      font-size: var(--font-size-h3-semibold-mobile);
+      line-height: var(--line-height-h3-semibold-mobile);
+      letter-spacing: var(--letter-spacing-h3-semibold-mobile);
+      font-weight: var(--font-weight-h3-semibold-mobile);
+    }
+    .text-h4-regular {
+      font-size: var(--font-size-h4-regular-mobile);
+      line-height: var(--line-height-h4-regular-mobile);
+      letter-spacing: var(--letter-spacing-h4-regular-mobile);
+      font-weight: var(--font-weight-h4-regular-mobile);
+    }
+    .text-h4-semibold {
+      font-size: var(--font-size-h4-semibold-mobile);
+      line-height: var(--line-height-h4-semibold-mobile);
+      letter-spacing: var(--letter-spacing-h4-semibold-mobile);
+      font-weight: var(--font-weight-h4-semibold-mobile);
+    }
+    .text-button {
+      font-size: var(--font-size-button-regular-mobile);
+      line-height: var(--line-height-button-regular-mobile);
+      letter-spacing: var(--letter-spacing-button-regular-mobile);
+      font-weight: var(--font-weight-button-regular-mobile);
+    }
+    .text-body-semibold {
+      font-size: var(--font-size-body-semibold-mobile);
+      line-height: var(--line-height-body-semibold-mobile);
+      letter-spacing: var(--letter-spacing-body-semibold-mobile);
+      font-weight: var(--font-weight-body-semibold-mobile);
+    }
+    .text-body-medium {
+      font-size: var(--font-size-body-medium-mobile);
+      line-height: var(--line-height-body-medium-mobile);
+      letter-spacing: var(--letter-spacing-body-medium-mobile);
+      font-weight: var(--font-weight-body-medium-mobile);
+    }
+    .text-body-regular {
+      font-size: var(--font-size-body-regular-mobile);
+      line-height: var(--line-height-body-regular-mobile);
+      letter-spacing: var(--letter-spacing-body-regular-mobile);
+      font-weight: var(--font-weight-body-regular-mobile);
+    }
+    .text-body-2-semibold {
+      font-size: var(--font-size-body-2-semibold-mobile);
+      line-height: var(--line-height-body-2-semibold-mobile);
+      letter-spacing: var(--letter-spacing-body-2-semibold-mobile);
+      font-weight: var(--font-weight-body-2-semibold-mobile);
+    }
+    .text-body-2-medium {
+      font-size: var(--font-size-body-2-medium-mobile);
+      line-height: var(--line-height-body-2-medium-mobile);
+      letter-spacing: var(--letter-spacing-body-2-medium-mobile);
+      font-weight: var(--font-weight-body-2-medium-mobile);
+    }
+    .text-body-2-regular {
+      font-size: var(--font-size-body-2-regular-mobile);
+      line-height: var(--line-height-body-2-regular-mobile);
+      letter-spacing: var(--letter-spacing-body-2-regular-mobile);
+      font-weight: var(--font-weight-body-2-regular-mobile);
+    }
+    .text-caption-semibold {
+      font-size: var(--font-size-caption-semibold-mobile);
+      line-height: var(--line-height-caption-semibold-mobile);
+      letter-spacing: var(--letter-spacing-caption-semibold-mobile);
+      font-weight: var(--font-weight-caption-semibold-mobile);
+    }
+    .text-caption-medium {
+      font-size: var(--font-size-caption-medium-mobile);
+      line-height: var(--line-height-caption-medium-mobile);
+      letter-spacing: var(--letter-spacing-caption-medium-mobile);
+      font-weight: var(--font-weight-caption-medium-mobile);
+    }
+    .text-caption-regular {
+      font-size: var(--font-size-caption-regular-mobile);
+      line-height: var(--line-height-caption-regular-mobile);
+      letter-spacing: var(--letter-spacing-caption-regular-mobile);
+      font-weight: var(--font-weight-caption-regular-mobile);
+    }
+  }
+  /* Colors */
+  .text-brand-yellow {
+    color: var(--color-brand-yellow);
+  }
+  .text-brand-yellow-dark {
+    color: var(--color-brand-yellow-dark);
+  }
+  .text-brand-yellow-light {
+    color: var(--color-brand-yellow-light);
+  }
+  .text-brand-indigo {
+    color: var(--color-brand-indigo);
+  }
+  .text-brand-indigo-dark {
+    color: var(--color-brand-indigo-dark);
+  }
+  .text-brand-indigo-light {
+    color: var(--color-brand-indigo-light);
+  }
+  .text-brand-green {
+    color: var(--color-brand-green);
+  }
+  .text-brand-red {
+    color: var(--color-brand-red);
+  }
+  .text-brand-red-light {
+    color: var(--color-brand-red-light);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +427,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sora-sans);
 }
