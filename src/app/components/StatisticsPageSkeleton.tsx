@@ -12,9 +12,9 @@ const StatisticsPageSkeleton = () => {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-sm lg:max-w-6xl z-10 py-4">
         {/* Large BMI Card - spans 2 cols and 2 rows */}
         <div className="col-span-2 row-span-2 bg-brand-indigo-dark/80 rounded-3xl p-6 animate-pulse">
-          <div className="h-4 bg-brand-indigo-light rounded w-1/2 mb-4"></div>
-          <div className="h-10 bg-brand-indigo-light rounded w-3/4 mb-4"></div>
-          <div className="h-10 bg-brand-indigo-light rounded w-full"></div>
+          <div className="h-4 lg:h-5 bg-brand-indigo-light rounded w-1/2 mb-4"></div>
+          <div className="h-10 lg:h-16 bg-brand-indigo-light rounded w-3/4 mb-4"></div>
+          <div className="h-10 lg:h-24 bg-brand-indigo-light rounded w-full"></div>
         </div>
 
         {/* Small cards */}
