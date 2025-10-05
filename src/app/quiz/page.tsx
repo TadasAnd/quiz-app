@@ -49,6 +49,20 @@ const QuizPage = () => {
     (currentAnswer as MeasurementAnswer).heightFt &&
     (currentAnswer as MeasurementAnswer).weight;
 
+  const isMultipleComplete =
+    currentQuestion.type === "multiple" &&
+    currentAnswer &&
+    Array.isArray(currentAnswer) &&
+    currentAnswer.length > 0;
+
+  const canProceed =
+    currentAnswer &&
+    (currentQuestion.type === "multiple"
+      ? isMultipleComplete
+      : currentQuestion.type === "measurements"
+      ? isMeasurementsComplete
+      : true);
+
   return (
     <main className="flex flex-col items-center size-full min-h-screen">
       <div className="flex flex-col gap-1 w-full z-10">
@@ -99,11 +113,7 @@ const QuizPage = () => {
           <div className="flex flex-col gap-4 pt-4">
             {currentQuestion.type !== "single" && (
               <Button
-                disabled={
-                  !currentAnswer ||
-                  (currentQuestion.type === "measurements" &&
-                    !isMeasurementsComplete)
-                }
+                disabled={!canProceed}
                 onClick={handleNextStep}
                 variant="primary"
               >
