@@ -6,7 +6,8 @@ export type Action =
   | { type: "SET_GENDER"; payload: "male" | "female" }
   | { type: "NEXT_STEP" }
   | { type: "PREVIOUS_STEP" }
-  | { type: "COMPLETE_QUIZ" };
+  | { type: "COMPLETE_QUIZ" }
+  | { type: "LOAD_STATE"; payload: QuizState };
 
 export const reducer = (state: QuizState, action: Action): QuizState => {
   switch (action.type) {
@@ -42,6 +43,9 @@ export const reducer = (state: QuizState, action: Action): QuizState => {
         ...state,
         isComplete: true,
       };
+
+    case "LOAD_STATE":
+      return action.payload;
 
     default:
       return state;

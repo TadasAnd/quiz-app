@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import ProgressBar from "../components/ProgressBar";
-import Link from "next/link";
 import MultiSelection from "../components/MultiSelection";
 import SingleSelection from "../components/SingleSelection";
 import type { Answer, MeasurementAnswer } from "../lib/quiz";
@@ -11,12 +10,27 @@ import quizData from "../lib/quiz";
 import Button from "../components/Button";
 import { useRouter } from "next/navigation";
 import Measurements from "../components/Measurements";
+import Logo from "../components/shared/Logo";
+import { useQuizValidation } from "../hooks/useQuizValidation";
 
 const QuizPage = () => {
   const quiz = useQuizContext();
-  const currentQuestion = quizData.questions[quiz.currentStep];
-  const currentAnswer = quiz.answers[currentQuestion.id];
   const router = useRouter();
+
+  const currentQuestion = quizData.questions[quiz.currentStep];
+  const currentAnswer = currentQuestion
+    ? quiz.answers[currentQuestion.id]
+    : undefined;
+
+  const { canProceed } = useQuizValidation({
+    currentQuestion: currentQuestion || quizData.questions[0],
+    currentAnswer,
+  });
+
+  if (!currentQuestion) {
+    router.push("/");
+    return null;
+  }
 
   const handleAnswer = (questionId: number, answer: Answer) => {
     quiz.setAnswer(questionId, answer);
@@ -34,6 +48,7 @@ const QuizPage = () => {
     }
     quiz.nextStep();
   };
+
   const handlePreviousStep = () => {
     if (quiz.currentStep === 0) {
       router.push("/");
@@ -42,46 +57,20 @@ const QuizPage = () => {
     quiz.previousStep();
   };
 
-  const isMeasurementsComplete =
-    currentQuestion.type === "measurements" &&
-    currentAnswer &&
-    (currentAnswer as MeasurementAnswer).age &&
-    (currentAnswer as MeasurementAnswer).heightFt &&
-    (currentAnswer as MeasurementAnswer).weight;
-
-  const isMultipleComplete =
-    currentQuestion.type === "multiple" &&
-    currentAnswer &&
-    Array.isArray(currentAnswer) &&
-    currentAnswer.length > 0;
-
-  const canProceed =
-    currentAnswer &&
-    (currentQuestion.type === "multiple"
-      ? isMultipleComplete
-      : currentQuestion.type === "measurements"
-      ? isMeasurementsComplete
-      : true);
-
   return (
     <div className="flex flex-col items-center size-full min-h-screen">
       <div className="flex flex-col gap-1 w-full z-10">
-        <div className="flex items-center justify-between w-full p-4">
-          <Link href="/">
-            <Image
-              src="/images/logo.png"
-              alt="Logo"
-              width={100}
-              height={40}
-              className="cursor-pointer"
-            />
-          </Link>
+        <div className="flex items-center justify-between w-full p-4 max-w-7xl mx-auto">
+          <Logo width={126} height={40} />
           <div className="flex items-center gap-1">
             <p className="text-body-semibold">{quiz.currentStep + 1}</p>
             <p className="text-body-regular">of 3</p>
           </div>
         </div>
-        <ProgressBar currentStep={quiz.currentStep + 1} totalSteps={3} />
+        <ProgressBar
+          currentStep={quiz.currentStep + 1}
+          totalSteps={quizData.questions.length}
+        />
       </div>
       <section className="flex flex-col gap-8 py-8 z-10 px-4 justify-center">
         <h1 className="text-h3-semibold text-brand-indigo-dark text-center px-6">

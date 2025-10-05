@@ -63,7 +63,7 @@ const quizData = {
   ],
 };
 
-export type QuestionType = "single" | "multiple";
+export type QuestionType = "single" | "multiple" | "measurements";
 
 export interface Option {
   id: number;
@@ -87,3 +87,7 @@ export type MeasurementAnswer = {
 export type Answer = number | number[] | MeasurementAnswer;
 
 export default quizData;
+
+export const getMeasurementsQuestion = () => {
+  return quizData.questions.find((q) => q.type === "measurements");
+};

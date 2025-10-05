@@ -1,35 +1,83 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect, useMemo } from "react";
+import { useRouter } from "next/navigation";
 import SummaryCard from "../components/SummaryCard";
 import { useQuizContext } from "../contexts/QuizContext";
-import { MeasurementAnswer } from "../lib/quiz";
+import { getMeasurementsQuestion, MeasurementAnswer } from "../lib/quiz";
 import {
   calculateImperialBMI,
   convertHeightToCm,
   convertWeightToKg,
 } from "../lib";
+import Logo from "../components/shared/Logo";
 
 const StatisticsPage = () => {
   const quiz = useQuizContext();
-  const measurements = quiz.answers[3] as MeasurementAnswer;
+  const router = useRouter();
+  const measurementsQuestion = getMeasurementsQuestion();
+
+  const measurements = measurementsQuestion
+    ? (quiz.answers[measurementsQuestion.id] as MeasurementAnswer)
+    : undefined;
+
+  const heightCm = useMemo(() => {
+    if (!measurements?.heightFt || !measurements?.heightIn) return 0;
+    return convertHeightToCm(
+      Number(measurements.heightFt),
+      Number(measurements.heightIn)
+    );
+  }, [measurements?.heightFt, measurements?.heightIn]);
+
+  const weightKg = useMemo(() => {
+    if (!measurements?.weight) return 0;
+    return convertWeightToKg(Number(measurements.weight));
+  }, [measurements?.weight]);
+
+  const bmi = useMemo(() => {
+    if (
+      !measurements?.weight ||
+      !measurements?.heightFt ||
+      !measurements?.heightIn
+    )
+      return 0;
+    return calculateImperialBMI(
+      Number(measurements.weight),
+      Number(measurements.heightFt),
+      Number(measurements.heightIn)
+    );
+  }, [measurements?.weight, measurements?.heightFt, measurements?.heightIn]);
+
+  useEffect(() => {
+    if (quiz.isLoading) return;
+
+    const hasRequiredData =
+      measurements &&
+      measurements.age &&
+      measurements.heightFt &&
+      measurements.weight &&
+      quiz.gender;
+
+    if (!hasRequiredData) {
+      router.push("/");
+    }
+  }, [quiz.isLoading, measurements, quiz.gender, router]);
+
+  if (quiz.isLoading) {
+    return null;
+  }
+
+  if (!measurements || !quiz.gender) {
+    return null;
+  }
+
   const age = measurements.age;
-  const heightFt = measurements.heightFt;
-  const heightIn = measurements.heightIn;
-  const weight = measurements.weight;
   const gender = quiz.gender;
-  const heightCm = convertHeightToCm(Number(heightFt), Number(heightIn));
-  const bmi = calculateImperialBMI(
-    Number(weight),
-    Number(heightFt),
-    Number(heightIn)
-  );
-  const weightKg = convertWeightToKg(Number(weight));
 
   return (
     <div className="flex flex-col items-center size-full min-h-screen p-4">
-      <div className="flex items-center justify-center w-full p-4 mb-8">
-        <Image src="/images/logo.png" alt="Logo" width={100} height={40} />
+      <div className="flex items-center justify-center w-full p-4 mb-8 z-10">
+        <Logo width={126} height={40} />
       </div>
       <h1 className="text-h2 text-brand-indigo-dark text-center px-6">
         Your personal summary

@@ -5,6 +5,7 @@ import Button from "./components/Button";
 import SaleBanner from "./components/SaleBanner";
 import Link from "next/link";
 import { useQuizContext } from "./contexts/QuizContext";
+import Logo from "./components/shared/Logo";
 
 export default function Home() {
   const quiz = useQuizContext();
@@ -15,21 +16,16 @@ export default function Home() {
 
   return (
     <main className="flex flex-col lg:flex-row lg:gap-20 items-center justify-center size-full min-h-screen">
-      <section className="flex flex-col p-4 lg:p-0 size-full items-center z-10 lg:max-w-[500px] lg:items-start">
-        <Image
-          src="/images/logo.png"
-          alt="Logo"
-          width={126}
-          height={40}
-          className="pb-4"
-        />
+      <section className="flex flex-col p-4 lg:p-0 size-full items-center z-10 lg:max-w-[500px] lg:items-start gap-4">
+        <Logo width={126} height={40} />
         <Image
           src="/images/brain_group.webp"
           alt="Brain Group"
-          width={270}
-          height={220}
+          width={269}
+          height={210}
           role="presentation"
           className="pb-4 lg:hidden"
+          priority={true}
         />
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
@@ -41,7 +37,7 @@ export default function Home() {
               serotonin balance. Take a quiz to see how Suniflow can help you.
             </h4>
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <h4 className="text-h4-semibold text-brand-indigo-dark">
               Start by selecting your gender:
             </h4>
@@ -76,6 +72,7 @@ export default function Home() {
         height={440}
         role="presentation"
         className="lg:block hidden max-w-[553px]"
+        priority={true}
       />
     </main>
   );
