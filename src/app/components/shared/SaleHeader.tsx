@@ -9,7 +9,7 @@ const SaleHeader = ({
   discount: string;
 }) => {
   return (
-    <div className="w-full flex flex-col lg:flex-row items-center justify-center text-white  lg:h-12 bg-brand-indigo-dark isolate gap-2 py-2 lg:py-0 lg:gap-6">
+    <header className="w-full flex flex-col lg:flex-row items-center justify-center text-white  lg:h-12 bg-brand-indigo-dark isolate gap-2 py-2 lg:py-0 lg:gap-6">
       <SaleText title={title} discount={discount} />
       <div className="w-9/10 h-[1px] bg-white lg:hidden" />
       <div className="flex items-center lg:gap-6 gap-2">
@@ -43,7 +43,7 @@ const SaleHeader = ({
           23:59:59
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

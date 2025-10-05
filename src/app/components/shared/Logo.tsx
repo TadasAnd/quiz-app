@@ -6,13 +6,19 @@ interface LogoProps {
   width?: number;
   height?: number;
   className?: string;
+  white?: boolean;
 }
 
-const Logo = ({ width = 126, height = 40, className }: LogoProps) => {
+const Logo = ({
+  width = 126,
+  height = 40,
+  className,
+  white = false,
+}: LogoProps) => {
   return (
     <Link href="/">
       <Image
-        src="/images/logo.png"
+        src={white ? "/images/logo_white.png" : "/images/logo.png"}
         alt="Logo"
         width={width}
         height={height}

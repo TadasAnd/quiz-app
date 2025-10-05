@@ -11,6 +11,7 @@ import {
   convertWeightToKg,
 } from "../lib";
 import Logo from "../components/shared/Logo";
+import StatisticsPageSkeleton from "../components/StatisticsPageSkeleton";
 
 const StatisticsPage = () => {
   const quiz = useQuizContext();
@@ -59,7 +60,7 @@ const StatisticsPage = () => {
   }, [quiz.isLoading, measurements, quiz.gender, router]);
 
   if (quiz.isLoading) {
-    return null;
+    return <StatisticsPageSkeleton />;
   }
 
   if (!measurements || !quiz.gender) {

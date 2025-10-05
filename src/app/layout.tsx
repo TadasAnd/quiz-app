@@ -3,6 +3,7 @@ import { Sora } from "next/font/google";
 import "./globals.css";
 import { QuizProvider } from "./contexts/QuizContext";
 import SaleHeader from "./components/shared/SaleHeader";
+import Footer from "./components/shared/Footer";
 
 const soraSans = Sora({
   variable: "--font-sora-sans",
@@ -27,9 +28,7 @@ export default function RootLayout({
         <QuizProvider>
           <main>{children}</main>
         </QuizProvider>
-        <footer>
-          <div className="w-full h-10 bg-brand-indigo-dark z-50 isolate" />
-        </footer>
+        <Footer />
       </body>
     </html>
   );
