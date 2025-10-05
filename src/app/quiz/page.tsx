@@ -29,7 +29,7 @@ const QuizPage = () => {
 
   const handleNextStep = () => {
     if (currentQuestion.type === "measurements") {
-      console.log("state", quiz.answers);
+      router.push("/statistics");
       return;
     }
     quiz.nextStep();
@@ -64,7 +64,7 @@ const QuizPage = () => {
       : true);
 
   return (
-    <main className="flex flex-col items-center size-full min-h-screen">
+    <div className="flex flex-col items-center size-full min-h-screen">
       <div className="flex flex-col gap-1 w-full z-10">
         <div className="flex items-center justify-between w-full p-4">
           <Link href="/">
@@ -136,7 +136,7 @@ const QuizPage = () => {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 };
 

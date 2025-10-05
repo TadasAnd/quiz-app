@@ -22,7 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${soraSans.variable} antialiased relative`}>
         <div className="absolute inset-0 bg-[url('/images/backgrounds/bg_yellow.webp')] bg-cover blur-md opacity-16" />
-        <QuizProvider>{children}</QuizProvider>
+        <QuizProvider>
+          <main>{children}</main>
+        </QuizProvider>
       </body>
     </html>
   );

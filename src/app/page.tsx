@@ -1,9 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Button from "./components/Button";
 import SaleBanner from "./components/SaleBanner";
 import Link from "next/link";
+import { useQuizContext } from "./contexts/QuizContext";
 
 export default function Home() {
+  const quiz = useQuizContext();
+
+  const handleGenderSelect = (gender: "male" | "female") => {
+    quiz.setGender(gender);
+  };
+
   return (
     <main className="flex flex-col lg:flex-row lg:gap-20 items-center justify-center size-full min-h-screen">
       <section className="flex flex-col p-4 lg:p-0 size-full items-center z-10 lg:max-w-[500px] lg:items-start">
@@ -38,12 +47,20 @@ export default function Home() {
             </h4>
             <div className="flex gap-4 justify-center pb-3">
               <Link href="/quiz" className="flex-1">
-                <Button variant="primary" iconPath="/images/icons/female.svg">
+                <Button
+                  onClick={() => handleGenderSelect("female")}
+                  variant="primary"
+                  iconPath="/images/icons/female.svg"
+                >
                   Female
                 </Button>
               </Link>
               <Link href="/quiz" className="flex-1">
-                <Button variant="secondary" iconPath="/images/icons/male.svg">
+                <Button
+                  onClick={() => handleGenderSelect("male")}
+                  variant="secondary"
+                  iconPath="/images/icons/male.svg"
+                >
                   Male
                 </Button>
               </Link>
