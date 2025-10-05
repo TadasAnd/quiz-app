@@ -417,15 +417,17 @@
   }
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sora-sans);
+}
+
+input::placeholder {
+  color: var(--color-brand-indigo-light);
+  opacity: 1;
+}
+
+input {
+  color: var(--color-brand-indigo-dark);
 }
