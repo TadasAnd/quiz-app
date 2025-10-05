@@ -10,8 +10,8 @@ interface LogoProps {
 }
 
 const Logo = ({
-  width = 126,
-  height = 40,
+  width = 177,
+  height = 56,
   className,
   white = false,
 }: LogoProps) => {
