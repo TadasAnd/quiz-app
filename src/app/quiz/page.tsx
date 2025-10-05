@@ -6,14 +6,14 @@ import Link from "next/link";
 import MultiSelection from "../components/MultiSelection";
 import SingleSelection from "../components/SingleSelection";
 import type { Answer, MeasurementAnswer } from "../lib/quiz";
-import useQuiz from "../hooks/useQuiz";
+import { useQuizContext } from "../contexts/QuizContext";
 import quizData from "../lib/quiz";
 import Button from "../components/Button";
 import { useRouter } from "next/navigation";
 import Measurements from "../components/Measurements";
 
 const QuizPage = () => {
-  const quiz = useQuiz();
+  const quiz = useQuizContext();
   const currentQuestion = quizData.questions[quiz.currentStep];
   const currentAnswer = quiz.answers[currentQuestion.id];
   const router = useRouter();
@@ -83,11 +83,11 @@ const QuizPage = () => {
         </div>
         <ProgressBar currentStep={quiz.currentStep + 1} totalSteps={3} />
       </div>
-      <section className="flex flex-col gap-8 py-8 z-10 px-4">
-        <h1 className="text-h3-semibold text-brand-indigo-dark">
+      <section className="flex flex-col gap-8 py-8 z-10 px-4 justify-center">
+        <h1 className="text-h3-semibold text-brand-indigo-dark text-center px-6">
           {currentQuestion.question}
         </h1>
-        <div className="flex flex-col gap-4 w-full max-w-lg mx-auto">
+        <div className="flex flex-col gap-4 max-w-sm mx-auto w-full">
           {currentQuestion.type === "single" && (
             <SingleSelection
               options={currentQuestion.options}

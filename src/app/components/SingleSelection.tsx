@@ -8,7 +8,6 @@ interface SingleSelectionProps {
 
 const SingleSelection = ({ options, onSelect }: SingleSelectionProps) => {
   const handleClick = (answer: number) => {
-    console.log("clicked", answer);
     onSelect(answer);
   };
   return (

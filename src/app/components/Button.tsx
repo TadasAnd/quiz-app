@@ -17,7 +17,7 @@ const Button = ({
   ...rest
 }: ButtonProps) => {
   const baseClasses =
-    "text-button disabled:opacity-50 disabled:cursor-not-allowed text-brand-indigo-dark px-6 py-4 rounded-full flex items-center gap-2 flex-1 cursor-pointer w-full";
+    "text-button disabled:opacity-50 border border-transparent disabled:cursor-not-allowed text-brand-indigo-dark px-6 py-4 rounded-full flex items-center gap-2 flex-1 cursor-pointer w-full";
   const variantClasses = {
     secondary: "bg-brand-yellow-dark justify-center uppercase",
     primary: "bg-brand-yellow justify-center uppercase",

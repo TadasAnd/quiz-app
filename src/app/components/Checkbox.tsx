@@ -7,7 +7,7 @@ interface CheckboxProps {
 }
 
 const inputBaseClasses =
-  "text-body-semibold text-brand-indigo-dark px-[27px] py-4 rounded-full flex items-center gap-2 flex-1 cursor-pointer w-full bg-white";
+  "text-body-semibold text-brand-indigo-dark px-6 py-4 rounded-full flex items-center gap-2 flex-1 cursor-pointer w-full bg-white";
 
 const Checkbox = ({ title, checked, onChange }: CheckboxProps) => {
   return (
@@ -28,7 +28,7 @@ const Checkbox = ({ title, checked, onChange }: CheckboxProps) => {
         />
 
         <div
-          className={`w-6 h-6 rounded border-[3px] flex items-center justify-center transition-all
+          className={`w-5 h-5 rounded border-[3px] flex items-center justify-center transition-all
             ${
               checked
                 ? "bg-brand-indigo border-brand-indigo"

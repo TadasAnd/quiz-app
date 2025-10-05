@@ -1,24 +1,14 @@
 import { Answer } from "@/app/lib/quiz";
+import { QuizState } from "./store";
 
-export interface QuizState {
-  answers: Record<number, Answer>;
-  currentStep: number;
-  isComplete: boolean;
-}
-
-export const initialQuizState: QuizState = {
-  answers: {},
-  currentStep: 0,
-  isComplete: false,
-};
-
-export type QuizAction =
+export type Action =
   | { type: "SET_ANSWER"; payload: { questionId: number; answer: Answer } }
+  | { type: "SET_GENDER"; payload: "male" | "female" }
   | { type: "NEXT_STEP" }
   | { type: "PREVIOUS_STEP" }
   | { type: "COMPLETE_QUIZ" };
 
-export function quizReducer(state: QuizState, action: QuizAction): QuizState {
+export const reducer = (state: QuizState, action: Action): QuizState => {
   switch (action.type) {
     case "SET_ANSWER":
       return {
@@ -27,6 +17,12 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
           ...state.answers,
           [action.payload.questionId]: action.payload.answer,
         },
+      };
+
+    case "SET_GENDER":
+      return {
+        ...state,
+        gender: action.payload,
       };
 
     case "NEXT_STEP":
@@ -50,4 +46,4 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
     default:
       return state;
   }
-}
+};

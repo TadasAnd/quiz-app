@@ -18,7 +18,7 @@ const Input = ({
 }: InputProps) => {
   return (
     <div
-      className={`relative w-full bg-white rounded-full px-6 py-4 ${extraClass}`}
+      className={`relative w-full bg-white rounded-full flex-1 px-6 py-4 ${extraClass}`}
     >
       <input
         id={name + unit}
