@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import SaleText from "./SaleText";
 
 interface SaleBannerProps {
   title: string;
@@ -18,9 +19,7 @@ const SaleBanner = ({ title, discount }: SaleBannerProps) => {
         height={16}
         role="presentation"
       />
-      <p className="text-body-2-semibold uppercase ml-1">{title}</p>
-      <p className="text-body-2-regular">up to</p>
-      <p className="text-body-2-semibold uppercase">{discount} off!</p>
+      <SaleText title={title} discount={discount} />
     </div>
   );
 };

@@ -18,6 +18,7 @@ const Logo = ({ width = 126, height = 40, className }: LogoProps) => {
         height={height}
         style={{ width: "auto", height: "auto" }}
         className={`cursor-pointer ${className}`}
+        priority={true}
       />
     </Link>
   );

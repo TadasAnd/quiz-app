@@ -1,13 +1,13 @@
 const calculateImperialBMI = (
   weightLbs: number,
   heightFt: number,
-  heightIn: number
+  heightIn: number = 0
 ) => {
   const height = heightFt * 12 + heightIn;
   return ((weightLbs / (height * height)) * 703).toFixed(2);
 };
 
-const convertHeightToCm = (heightFt: number, heightIn: number) => {
+const convertHeightToCm = (heightFt: number, heightIn: number = 0) => {
   return (heightFt * 30.48 + heightIn * 2.54).toFixed(2);
 };
 

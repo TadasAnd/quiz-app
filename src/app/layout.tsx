@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
 import { QuizProvider } from "./contexts/QuizContext";
+import SaleHeader from "./components/shared/SaleHeader";
 
 const soraSans = Sora({
   variable: "--font-sora-sans",
@@ -22,9 +23,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${soraSans.variable} antialiased relative`}>
         <div className="absolute inset-0 bg-[url('/images/backgrounds/bg_yellow.webp')] bg-cover blur-md opacity-16" />
+        <SaleHeader title="Exclusive Summer sale" discount="60%" />
         <QuizProvider>
           <main>{children}</main>
         </QuizProvider>
+        <footer>
+          <div className="w-full h-10 bg-brand-indigo-dark z-50 isolate" />
+        </footer>
       </body>
     </html>
   );

@@ -22,7 +22,7 @@ const StatisticsPage = () => {
     : undefined;
 
   const heightCm = useMemo(() => {
-    if (!measurements?.heightFt || !measurements?.heightIn) return 0;
+    if (!measurements?.heightFt) return 0;
     return convertHeightToCm(
       Number(measurements.heightFt),
       Number(measurements.heightIn)
@@ -35,12 +35,7 @@ const StatisticsPage = () => {
   }, [measurements?.weight]);
 
   const bmi = useMemo(() => {
-    if (
-      !measurements?.weight ||
-      !measurements?.heightFt ||
-      !measurements?.heightIn
-    )
-      return 0;
+    if (!measurements?.weight || !measurements?.heightFt) return 0;
     return calculateImperialBMI(
       Number(measurements.weight),
       Number(measurements.heightFt),

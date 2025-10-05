@@ -15,7 +15,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col lg:flex-row lg:gap-20 items-center justify-center size-full min-h-screen">
+    <main className="flex flex-col lg:flex-row lg:gap-20 items-center size-full min-h-screen">
       <section className="flex flex-col p-4 lg:p-0 size-full items-center z-10 lg:max-w-[500px] lg:items-start gap-4">
         <Logo width={126} height={40} />
         <Image
