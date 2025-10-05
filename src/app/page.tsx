@@ -26,6 +26,7 @@ export default function Home() {
           role="presentation"
           className="pb-4 lg:hidden"
           priority={true}
+          fetchPriority="high"
         />
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
@@ -68,11 +69,12 @@ export default function Home() {
       <Image
         src="/images/brain_group_desktop.webp"
         alt="Brain Group"
-        width={450}
-        height={440}
+        width={554}
+        height={433}
         role="presentation"
-        className="lg:block hidden max-w-[553px]"
+        className="lg:block hidden max-w-[554px]"
         priority={true}
+        fetchPriority="high"
       />
     </main>
   );
