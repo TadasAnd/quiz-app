@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import SaleText from "../SaleText";
+import { useCountdown } from "@/app/hooks/useCountdown";
 
 const SaleHeader = ({
   title,
@@ -8,6 +11,8 @@ const SaleHeader = ({
   title: string;
   discount: string;
 }) => {
+  const { hours, minutes, seconds } = useCountdown();
+
   return (
     <header className="w-full flex flex-col lg:flex-row items-center justify-center text-white  lg:h-12 bg-brand-indigo-dark isolate gap-2 py-2 lg:py-0 lg:gap-6">
       <SaleText title={title} discount={discount} />
@@ -39,8 +44,8 @@ const SaleHeader = ({
             DETOX GUIDE INCLUDED
           </p>
         </div>
-        <div className="bg-brand-yellow text-brand-indigo-dark px-2 py-1 rounded-md text-body-2-semibold order-first lg:order-last">
-          23:59:59
+        <div className="bg-brand-yellow w-[70px] lg:w-[78px] text-brand-indigo-dark px-2 py-1 rounded-md text-body-2-semibold order-first lg:order-last">
+          {hours}:{minutes}:{seconds}
         </div>
       </div>
     </header>
